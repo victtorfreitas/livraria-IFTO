@@ -1,0 +1,28 @@
+================= É necessário utilizar o servidor wildfly-10.0.0.Final ==================
+
+1-	Baixe e descompacte o servidor
+	http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip
+
+2-	Dentro da pasta “/standalone/configuration” cole o arquivo standalone.xml
+
+3-	Dentro da pasta “/modules/system/layers/base/com” cole a pasta mysql
+
+=============================================================================
+O uso do banco de dados mysql é provisório pois iremos utilizar o banco do IFTO. 
+Trabalhei com a IDE eclipse Oxygen.3 Release (4.7.3) vocês podem utilizar a IDE de sua preferência,
+porém talvez eu não possa ajuda-los em alguns erros propostos pela configuração da IDE. 
+
+-Informativo
+As duas class que estão no diretório Classes são para alimentação do banco de dados. Vocês devem alterar o package e depois executar a classe main. 
+Qualquer dúvida entre em contato, após verificar o projeto e executa-lo preciso saber qual será sua preferência para desenvolvimento?
+
+
+-Necessidades =============================================================================
+Precisamos de duas pessoas para trabalhar com a camada de aplicação
+
+-Web Design
+-Interface
+
+Precisamos de mais um cara comigo para desenvolver em JAVA com JSF, JPA, Hibernante. 
+
+-Programador
