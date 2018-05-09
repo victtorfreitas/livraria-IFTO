@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head />
+<h:body>
+	<div id="cabecalho">
+		<h:graphicImage library="img" name="logo.png" />
+		<p:growl id="messages" showDetail="true" autoUpdate="true"
+			sticky="false" />
+		<h:form rendered="#{usuarioLogado != null}">
+			<p:menubar>
+				<p:submenu label="Cadastros" icon="fa fa-fw fa-align-justify">
+					<p:menuitem value="Livros" action="livro?faces-redirect=true" icon="fa fa-fw fa-book" />
+					<p:separator />
+					<p:menuitem value="Autores" action="autor?faces-redirect=true" icon="fa fa-fw fa-user" />
+					<p:separator />
+					<p:menuitem value="Vendas" action="vendas?faces-redirect=true" icon="fa fa-fw fa-cart-arrow-down" />
+				</p:submenu>
+				<p:submenu label="Outros">
+					<p:menuitem value="Logout" action="#{loginBean.deslogar}"
+						icon="fa fa-fw fa-sign-out" />
+				</p:submenu>
+				<p:submenu label="Primefaces">
+					<p:menuitem value="ShowCase" url="http://primefaces.org/showcase"
+						icon="fa fa-fw fa-sign-out" />
+				</p:submenu>
+
+				<p:submenu label="Temas">
+					<p:menuitem>
+						<p:themeSwitcher id="basic" style="width:165px"
+							value="#{temaBean.tema}">
+							<f:selectItems value="#{temaBean.temas}" var="#{tema}"
+								itemLabel="#{tema}" itemValue="#{tema}" />
+							<f:ajax />
+						</p:themeSwitcher>
+					</p:menuitem>
+				</p:submenu>
+			</p:menubar>
+
+		</h:form>
+		<h1>
+			<ui:insert name="titulo"></ui:insert>
+		</h1>
+	</div>
+
+	<div id="conteudo">
+		<ui:insert name="conteudo">
+		</ui:insert>
+	</div>
+</h:body>
+
+</html>
